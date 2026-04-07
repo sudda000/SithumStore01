@@ -1,0 +1,35 @@
+// Mobile menu
+function togMob(){
+  document.getElementById("mm").classList.toggle("on");
+}
+
+// Modals
+function openM(id){
+  document.getElementById(id+"M").classList.add("on");
+}
+function closeM(id){
+  document.getElementById(id+"M").classList.remove("on");
+}
+
+// Fake login/signup
+function doLogin(e){e.preventDefault();alert("Login Success (Demo)");closeM("login");}
+function doSignup(e){e.preventDefault();alert("Account Created (Demo)");closeM("signup");}
+
+// Contact WhatsApp
+function handleContact(e){
+  e.preventDefault();
+  let name=document.getElementById("cName").value;
+  let msg=document.getElementById("cMsg").value;
+  window.open(`https://wa.me/${WA}?text=Hi I am ${name}. ${msg}`,"_blank");
+}
+
+// Buy button
+function buyProd(name){
+  window.open(`https://wa.me/${WA}?text=I want to buy ${name}`,"_blank");
+}
+
+// Track order
+function trackOrder(){
+  document.getElementById("trkRes").classList.add("on");
+  alert("Order found (Demo tracking)");
+}
